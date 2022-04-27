@@ -1,0 +1,326 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Strong cyan: hsl(172, 67%, 45%)
+
+### Neutral
+
+- Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Very light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (form inputs): 24px
+
+### Font
+
+- Family: [Space Mono](https://fonts.google.com/specimen/Space+Mono)
+- Weights: 700
+*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --Error: rgb(208,119,104);
+    --Error2: rgb(218,115,89);
+
+    --tamañoDeFuenteInputs: 24px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: var(--Light-grayish-cyan);
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"],
+input[type="number"]:focus {
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--Dark-grayish-cyan);
+    font-size: 1.6em;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    background-color: var(--White);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 0.5em;
+}
+
+main section {
+    margin: 1.5em;
+}
+
+h3,
+h4 {
+    padding-bottom: 5px;
+    color: var(--Grayish-cyan);
+}
+
+.total-amount{
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Very-light-grayish-cyan);
+}
+.ta-Active{
+    outline: 2px solid var(--Strong-cyan);
+}
+.total-amount .dolarIcon img{
+    padding: 0.7em;
+}
+.total-amount input{
+    width: 100%;
+    padding: 0.7em;
+    background-color: var(--Very-light-grayish-cyan);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    text-align: end;
+    font-weight: bold;
+    content: "0.0";
+}
+.total-amount input::placeholder{
+    font-weight: bold;
+    color: var(--Very-dark-cyan);
+}
+
+#totalAmountBill {
+    font-size: 1.3em;
+    color: var(--Very-dark-cyan);
+}
+.tipGrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 0.8em;
+}
+
+.tipGrid input{
+    width: 100%;
+}
+
+.tipGrid label{
+    display: flex;
+}
+
+.tipGrid a {
+    background-color: var(--Very-dark-cyan);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 24px;
+    padding: 0.2em;
+    text-decoration: none;
+}
+.tipGrid a:hover{
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.tipGrid a:active{
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.tipGrid input{
+    background-color: var(--Very-light-grayish-cyan);
+    border-radius: 5px;
+    padding: 0.2em;
+    font-family: 'Space Mono', monospace;
+    color: var(--Very-dark-cyan);
+    font-size: 24px;
+    text-align: end;
+    padding-right: 10px;
+}
+.tipGrid input:focus, .tipGrid input:active{
+    outline: 2px solid;
+    outline-color: var(--Strong-cyan);
+}
+input.customActive{
+    outline: 2px solid;
+    outline-color: var(--Strong-cyan);
+}
+
+.tipGrid input::placeholder{
+    font-family: 'Space Mono', monospace;
+    color: var(--Dark-grayish-cyan);
+    font-size: 24px;
+    text-align: end;;
+}
+a.percentageActive{
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+}
+.peopleNumber{
+    display: flex;
+    align-items: center;
+    background-color: var(--Very-light-grayish-cyan);
+    border-radius: 5px;
+    
+}
+.peopleInput{
+    width: 100%;
+}
+.peopleInput input{
+    width: 100%;
+    text-align: end;
+
+    padding: 0.2em;
+    font-family: 'Space Mono', monospace;
+    color: var(--Very-dark-cyan);
+    font-size: 24px;
+}
+.peopleIcon img{
+    padding-left: 0.7em;
+}
+.totalAmount{
+    background-color: var(--Very-dark-cyan);
+    padding: 2em;
+    margin: 00.8em;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.totalAmount h3{
+    color: var(--White);
+}
+.tipAmount, .totalPersonAmount{
+    padding-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#totalPersonNumber, #tipAmountPerson{
+    background-color: var(--Very-dark-cyan);
+    border: none;
+    width: 60%;
+    justify-self: flex-end;
+    text-align: end;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: var(--tamañoDeFuenteInputs);
+    color:var(--Strong-cyan)
+}
+.tipAmount p, .totalPersonAmount p{
+    line-height: 1px;
+    color: var(--Dark-grayish-cyan);
+}
+
+.totalAmount a{
+    text-align: center;
+    background-color: var(--Strong-cyan);
+    text-decoration: none;
+    color: var(--Very-dark-cyan);
+    font-size: 24px;
+    border-radius: 5px;
+    padding: 0.3em;
+}
+.totalAmount a:active{
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+}
+#zero{
+    color: var(--Error);
+    opacity: 0;
+    transition: ease 200ms;
+}
+.isZero{
+    outline: 2px solid var(--Error);
+}
+
+main{
+    width: 471px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+
+    .title{
+        margin: 0;
+        margin-bottom: -3.8em;
+        margin-top: 3em;
+    }
+    main{
+        width: auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .tipGrid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+   #btnReset{
+       margin-top: 5em;
+   }
+}
+@media (min-width: 966px) {
+    #totalPersonNumber, #tipAmountPerson{
+        font-size: 2.7em;
+    }
+    main{
+        width: 966px;
+        height: auto;
+        border-radius: 30px;
+    }
+}
+.center{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

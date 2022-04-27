@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="title">
+    <p>Spli</p>
+    <p>tter</p>
+  </header>
+  <div class="center">
+
+
+    <main>
+      <div>
+        <section class="bill">
+          <h3>Bill</h3>
+          <div class="total-amount">
+            <div class="dolarIcon">
+              <img src="./images/icon-dollar.svg" alt="">
+            </div>
+              <input id="totalAmountBill" placeholder="Amount" type="number"></input>
+          </div>
+        </section>
+    
+          <section class="tipSelector">
+            <h4>Select Tip %</h4>
+            <div class="tipGrid">
+              <a class="percentages">5%</a>
+              <a class="percentages">10%</a>
+              <a class="percentages">15%</a>
+              <a class="percentages">25%</a>
+              <a class="percentages">50%</a>
+              <label for="custom">
+                <input id="tipCustom" type="number" placeholder="Custom">
+              </label>
+            </div>
+          </section>
+    
+          <section class="people">
+              <h3>Number of People</h3>
+              <p id="zero">Can't be zero</p>  
+            <div class="peopleNumber">
+              <div class="peopleIcon">
+                <img src="./images/icon-person.svg" alt="">
+              </div>
+              <div class="peopleInput">
+                <label for="peopleNumber">
+                  <input class="peopleNumber" id="peopleAmountIdk" type="number">
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="containerTA">
+          <section class="totalAmount">
+            <div class="tipAmount">
+              <div>
+                <h3>Tip Amount</h3>
+                <p>/ person</p>
+              </div>
+              <input type="text" disabled id="tipAmountPerson" value="$0.0">
+            </div>
+            <div class="totalPersonAmount">
+              <div>
+                <h3>Total</h3>
+                <p>/ person</p>
+              </div>
+              <input type="text" id="totalPersonNumber" value="$0.0" disabled value="$100.0"> 
+            </div>
+              <a href="#" id="btnReset" onclick="reset()">Reset</a>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  
+  <script src="app.js"></script>
+</body>
+</html>
